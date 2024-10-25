@@ -4,4 +4,4 @@ select
     , reviewer_name
     , initcap(comments) as comments
     , upper(sentiment) as sentiment
-from {{ source('raw', 'raw_reviews') }}
+from {{ source('raw', 'raw_reviews') }} 

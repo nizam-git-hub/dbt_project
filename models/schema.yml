@@ -48,4 +48,4 @@ seeds:
     columns:
       - name: id
         tests:
-          - unique
+          - unique 

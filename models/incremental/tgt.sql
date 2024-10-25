@@ -9,4 +9,4 @@
 SELECT * FROM AIRBNB.RAW.SRC
 {% if is_incremental() %}
 WHERE CREATED_AT > (SELECT MAX(CREATED_AT) FROM AIRBNB.DEV.TGT)
-{% endif %}
+{% endif %} 

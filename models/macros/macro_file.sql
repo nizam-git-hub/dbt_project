@@ -14,7 +14,7 @@ from dev.stg_hosts;
 
 select * from dev.stg_hosts;
 
-number - single quote not required
+number - single quote not required 
 column, str - single quote mandatory;
 
 

@@ -15,4 +15,4 @@ SELECT
     , NAME
     , EMAIL
     , CREATED_AT
-FROM {{source('raw','users')}}
+FROM {{source('raw','users')}} 

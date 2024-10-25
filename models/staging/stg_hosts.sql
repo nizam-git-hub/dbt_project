@@ -7,6 +7,6 @@ select
     end as is_superhost
     , created_at
     , updated_at
-from {{ source('raw', 'raw_hosts') }}
+from {{ source('raw', 'raw_hosts') }} 
 
 
