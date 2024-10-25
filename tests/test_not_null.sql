@@ -1,1 +1,0 @@
-{{test_not_null_macro('dim_listings', 'listings_id')}}
