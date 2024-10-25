@@ -1,0 +1,51 @@
+version: 2
+
+sources:
+  - name: raw
+
+    tables:
+      - name: raw_hosts
+        description: "This table contains hosts information"
+        columns: 
+          - name: id
+            tests:
+              - unique
+              - not_null
+
+      - name: raw_listings
+      - name: raw_reviews
+      - name: customers 
+        description: "Contains information about customer orders."
+      - name: orders
+      - name: employees
+      - name: users
+
+models:
+  - name: dim_hosts
+    columns:
+      - name: host_id
+        tests:
+          - not_null
+                    
+      - name: is_superhost
+        tests:
+          - accepted_values:
+              values: ['True','False']
+  - name: stg_hosts
+    columns:
+      - name: host_id
+        tests:
+          - unique
+  - name: orders
+    tests:
+      - relationships:
+          column_name: customer_id
+          to: ref('customers')
+          field: customer_id
+
+seeds:
+  - name: students
+    columns:
+      - name: id
+        tests:
+          - unique
